@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contactez-nous – revisetout.sn</title>
+  <meta name="description" content="Une question, un signalement, un partenariat ? Contacte revisetout.sn par WhatsApp, e-mail ou via le formulaire. Réponse sous 48 heures.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">revise<span>tout</span>.sn</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <nav class="nav" id="nav">
+        <a href="index.html#niveaux">Niveaux</a>
+        <a href="bibliotheque.html">Bibliothèque</a>
+        <a href="partager.html">Partager</a>
+        <a href="index.html#contact" class="btn btn-yellow btn-small">S'inscrire</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="simple-hero">
+      <div class="container">
+        <h1>Contactez-nous</h1>
+        <p class="simple-hero-sub">Une question, une idée, un document à signaler ? On te répond sous 48 heures.</p>
+      </div>
+    </section>
+
+    <!-- ============ POURQUOI ============ -->
+    <section class="contact-intro">
+      <div class="container contact-inner">
+        <h2>Pourquoi revisetout.sn ?</h2>
+        <p>
+          Tout a commencé en classe de terminale. Comme beaucoup d'élèves,
+          notre fondateur cherchait de bons documents pour réviser — et
+          perdait un temps fou à fouiller partout, souvent sans rien trouver
+          de fiable. Il a créé revisetout.sn pour qu'aucun élève sénégalais
+          n'ait plus jamais à vivre ça : un seul endroit, gratuit, clair,
+          où trouver épreuves, fiches et corrigés.
+        </p>
+        <p>
+          Le projet est porté par <strong>Galsen UP</strong>, un groupe qui
+          veut moderniser le Sénégal avec des outils simples et utiles au
+          quotidien. Si tu as une idée, un document ou juste un mot gentil,
+          écris-nous — chaque message compte.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ BOUTONS DIRECTS ============ -->
+    <section class="contact-actions">
+      <div class="container contact-actions-inner">
+        <a class="contact-btn contact-btn-wa"
+           href="https://wa.me/221766589598"
+           target="_blank" rel="noopener">
+          <span aria-hidden="true">💬</span>
+          <span>WhatsApp</span>
+        </a>
+        <a class="contact-btn contact-btn-mail"
+           href="mailto:boubscapital@gmail.com">
+          <span aria-hidden="true">✉️</span>
+          <span>E-mail</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ FORMULAIRE ============ -->
+    <section class="contact-form-section">
+      <div class="container contact-form-wrap">
+
+        <!-- ÉCRAN DE SUCCÈS -->
+        <div class="contact-success" id="contactSuccess" hidden>
+          <div class="contact-success-check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 12.5 10 18 20 6"/>
+            </svg>
+          </div>
+          <h2>Message reçu. Merci !</h2>
+          <p>
+            On te répond en général <strong>sous 48 heures</strong>. Si c'est
+            urgent, WhatsApp reste le plus rapide.
+          </p>
+          <a href="https://wa.me/221766589598" class="contact-btn contact-btn-wa contact-btn-inline"
+             target="_blank" rel="noopener">
+            <span aria-hidden="true">💬</span><span>Ouvrir WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- FORMULAIRE -->
+        <form id="contactForm" class="contact-form"
+              name="contact" method="POST"
+              action="URL_A_REMPLACER"
+              data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <!-- ↑ Remplace "URL_A_REMPLACER" par l'adresse de ton service d'envoi
+               (Formspree, Netlify Forms, Getform, etc.).
+               Si tu utilises Netlify Forms, laisse action="#" — Netlify gère. -->
+
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="_redirect" value="contact.html?envoye=1">
+
+          <p class="contact-honeypot" aria-hidden="true">
+            <label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
+
+          <div class="contact-grid">
+
+            <div class="contact-field">
+              <label for="c-nom">Nom <span class="opt">(facultatif)</span></label>
+              <input id="c-nom" name="nom" type="text" autocomplete="name"
+                     placeholder="Ton prénom ou ton nom">
+            </div>
+
+            <div class="contact-field">
+              <label for="c-contact">E-mail ou WhatsApp <span class="req">*</span></label>
+              <input id="c-contact" name="contact" type="text" required
+                     autocomplete="email"
+                     placeholder="ex : awa@mail.com ou +221 77 000 00 00">
+            </div>
+
+            <div class="contact-field contact-field-full">
+              <label for="c-sujet">Sujet <span class="req">*</span></label>
+              <select id="c-sujet" name="sujet" required>
+                <option value="">— Choisis un sujet —</option>
+                <option value="Signaler un document">Signaler un document</option>
+                <option value="Partenariat">Partenariat</option>
+                <option value="Suggestion">Suggestion</option>
+                <option value="Autre">Autre</option>
+              </select>
+            </div>
+
+            <!-- Champs conditionnels pour signalement -->
+            <div class="contact-field contact-field-full" id="signalDocField" hidden>
+              <label for="c-doc">Lien ou titre du document concerné</label>
+              <input id="c-doc" name="document" type="text"
+                     placeholder="ex : Maths BFEM 2023, ou lien de la page">
+            </div>
+
+            <div class="contact-field contact-field-full" id="signalRaisonField" hidden>
+              <label for="c-raison">Raison du signalement</label>
+              <textarea id="c-raison" name="raison" rows="3"
+                        placeholder="Explique brièvement ce qui ne va pas."></textarea>
+            </div>
+
+            <div class="contact-field contact-field-full">
+              <label for="c-message">Message <span class="req">*</span></label>
+              <textarea id="c-message" name="message" rows="5" required
+                        placeholder="Écris ton message ici…"></textarea>
+            </div>
+
+            <div class="contact-field contact-field-full">
+              <label class="contact-check">
+                <input type="checkbox" name="consentement" value="oui" required>
+                <span>J'accepte que mes informations servent à me répondre.</span>
+              </label>
+            </div>
+
+          </div>
+
+          <button type="submit" class="contact-submit">
+            <span aria-hidden="true">📨</span>
+            <span>Envoyer</span>
+          </button>
+        </form>
+
+        <!-- CARTE "Partager un document" -->
+        <aside class="contact-share-card">
+          <div class="contact-share-text">
+            <h3>Tu veux partager un document ?</h3>
+            <p>Une épreuve, un corrigé, une fiche ? Ça prend 30 secondes.</p>
+          </div>
+          <a href="partager.html" class="contact-share-btn">
+            Partager un PDF →
+          </a>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">revise<span>tout</span>.sn</a>
+        <p>© 2026 revisetout.sn · La bibliothèque numérique des élèves et étudiants du Sénégal.</p>
+      </div>
+      <nav class="footer-links" aria-label="Liens du pied de page">
+        <a href="bibliotheque.html">Bibliothèque</a>
+        <a href="partager.html">Partager</a>
+        <a href="contact.html">Contact</a>
+        <a href="mentions-legales.html">Mentions légales et conditions</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    /* ============ Menu burger ============ */
+    (function () {
+      var btn = document.getElementById('menuBtn');
+      var nav = document.getElementById('nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+
+    /* ============ Page Contact ============ */
+    (function () {
+      'use strict';
+
+      var form       = document.getElementById('contactForm');
+      var successBox = document.getElementById('contactSuccess');
+      var sujet      = document.getElementById('c-sujet');
+      var docField   = document.getElementById('signalDocField');
+      var raisonFld  = document.getElementById('signalRaisonField');
+
+      /* Champs conditionnels pour "Signaler un document" */
+      if (sujet) {
+        sujet.addEventListener('change', function () {
+          var isSignal = sujet.value === 'Signaler un document';
+          docField.hidden  = !isSignal;
+          raisonFld.hidden = !isSignal;
+          if (isSignal) {
+            var first = docField.querySelector('input, textarea');
+            if (first) first.focus();
+          }
+        });
+      }
+
+      /* Validation simple côté client */
+      form.addEventListener('submit', function (e) {
+        var required = [
+          { el: document.getElementById('c-contact'), msg: "Indique un e-mail ou un WhatsApp." },
+          { el: sujet,                                  msg: "Choisis un sujet." },
+          { el: document.getElementById('c-message'),   msg: "Écris ton message." }
+        ];
+        var check = form.querySelector('input[name="consentement"]');
+
+        for (var i = 0; i < required.length; i++) {
+          if (!required[i].el.value.trim()) {
+            e.preventDefault();
+            required[i].el.focus();
+            alert(required[i].msg);
+            return;
+          }
+        }
+        if (check && !check.checked) {
+          e.preventDefault();
+          check.focus();
+          alert("Merci de cocher la case de consentement.");
+        }
+        // En local, on simule le succès
+        if (location.protocol === 'file:') {
+          e.preventDefault();
+          showSuccess();
+        }
+      });
+
+      function showSuccess() {
+        if (form) form.hidden = true;
+        if (successBox) {
+          successBox.hidden = false;
+          window.scrollTo({ top: successBox.offsetTop - 40, behavior: 'smooth' });
+        }
+      }
+
+      /* ?envoye=1 dans l'URL → afficher le message de remerciement */
+      try {
+        var p = new URLSearchParams(window.location.search);
+        if (p.get('envoye') === '1') showSuccess();
+      } catch (err) { /* ignore */ }
+    })();
+  </script>
+</body>
+</html>

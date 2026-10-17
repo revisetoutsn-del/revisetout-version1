@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>revisetout.sn – Révise tout, réussis tout</title>
+  <meta name="description" content="Épreuves, fiches de cours et corrigés du CFEE, BFEM, BAC et du supérieur au Sénégal. Gratuit, léger et pensé pour le mobile.">
+  <link rel="preload" as="image" href="hero.png" fetchpriority="high">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">revise<span>tout</span>.sn</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="active" aria-current="page">Accueil</a>
+        <a href="bibliotheque.html">Bibliothèque</a>
+        <a href="partager.html">Partager</a>
+        <a href="contact.html" class="btn btn-yellow btn-small">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="accueil">
+      <div class="container hero-inner">
+
+        <!-- Colonne texte : 1er dans le DOM = 1er sur mobile -->
+        <div class="hero-content">
+          <h1 class="hero-title">Révise tout,<br><span class="mark">réussis tout.</span></h1>
+          <p class="hero-text">Trouve ton épreuve, télécharge, et c'est parti.</p>
+
+          <!-- Action principale -->
+          <a href="bibliotheque.html" class="btn-hero">
+            <span aria-hidden="true">📚</span>
+            <span>Bibliothèque</span>
+          </a>
+
+          <!-- Action secondaire : recherche → biblio avec ?q= -->
+          <form class="hero-search" role="search"
+                action="bibliotheque.html" method="get">
+            <label class="sr-only" for="hero-q">Rechercher une épreuve, une fiche ou un corrigé</label>
+            <input id="hero-q" name="q" type="search"
+                   placeholder="Maths BFEM 2023, Philo BAC L…"
+                   autocomplete="off" enterkeyhint="search">
+            <button type="submit" class="hero-search-btn">Rechercher</button>
+          </form>
+
+          <!-- 3 badges max, très légers -->
+          <ul class="hero-badges">
+            <li>CFEE · BFEM · BAC</li>
+            <li>Corrigés inclus</li>
+            <li>100% gratuit</li>
+          </ul>
+        </div>
+
+        <!-- Colonne image -->
+        <div class="hero-media">
+          <img src="hero.png"
+               alt="Élève qui montre du doigt la bibliothèque de ressources de revisetout.sn"
+               width="520" height="480"
+               fetchpriority="high" decoding="async">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ NIVEAUX ============ -->
+    <section class="section" id="niveaux">
+      <div class="container">
+        <h2>Choisis ton niveau</h2>
+        <p class="section-sub">Toutes les ressources sont classées par examen et par matière.</p>
+        <div class="cards">
+          <a href="bibliotheque.html?niveau=CFEE" class="card">
+            <span class="badge">Élémentaire</span>
+            <h3>CFEE</h3>
+            <p>Épreuves, exercices et corrigés pour le certificat de fin d'études élémentaires.</p>
+            <span class="card-link">Voir les ressources →</span>
+          </a>
+          <a href="bibliotheque.html?niveau=BFEM" class="card">
+            <span class="badge">Moyen</span>
+            <h3>BFEM</h3>
+            <p>Maths, Français, SVT, Physique-Chimie, Anglais et plus encore.</p>
+            <span class="card-link">Voir les ressources →</span>
+          </a>
+          <a href="bibliotheque.html?niveau=BAC" class="card">
+            <span class="badge">Secondaire</span>
+            <h3>BAC</h3>
+            <p>Séries L, S1, S2, S3, G : sujets, corrigés et fiches de révision.</p>
+            <span class="card-link">Voir les ressources →</span>
+          </a>
+          <a href="bibliotheque.html?niveau=Universit%C3%A9" class="card">
+            <span class="badge">Supérieur</span>
+            <h3>Université</h3>
+            <p>Cours, TD et anciens examens pour les étudiants du supérieur.</p>
+            <span class="card-link">Voir les ressources →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESSOURCES RÉCENTES ============ -->
+    <section class="section section-grey" id="ressources">
+      <div class="container">
+        <h2>Dernières ressources</h2>
+        <p class="section-sub">Ajoutées récemment par la communauté.</p>
+        <ul class="resources">
+          <li class="resource">
+            <div>
+              <h3>Mathématiques – BFEM 2023</h3>
+              <p>Sujet + corrigé détaillé · PDF · 1,2 Mo</p>
+            </div>
+            <a href="fichiers/maths-bfem-2023.pdf" class="btn btn-yellow btn-small" download>Télécharger</a>
+          </li>
+          <li class="resource">
+            <div>
+              <h3>Philosophie – BAC série L</h3>
+              <p>Fiches de cours sur les grands thèmes · PDF · 2,4 Mo</p>
+            </div>
+            <a href="fichiers/philo-bac-l-2023.pdf" class="btn btn-yellow btn-small" download>Télécharger</a>
+          </li>
+          <li class="resource">
+            <div>
+              <h3>Français – CFEE 2022</h3>
+              <p>Dictée, rédaction et grammaire · PDF · 0,9 Mo</p>
+            </div>
+            <a href="fichiers/francais-cfee-2022.pdf" class="btn btn-yellow btn-small" download>Télécharger</a>
+          </li>
+          <li class="resource">
+            <div>
+              <h3>Algèbre – Licence 1</h3>
+              <p>Cours complet + TD corrigés · PDF · 3,1 Mo</p>
+            </div>
+            <a href="fichiers/algebre-l1-2024.pdf" class="btn btn-yellow btn-small" download>Télécharger</a>
+          </li>
+        </ul>
+
+        <p style="margin-top:1.25rem;text-align:center;">
+          <a href="bibliotheque.html" class="btn btn-yellow">Voir toute la bibliothèque →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ POURQUOI ============ -->
+    <section class="section" id="pourquoi">
+      <div class="container">
+        <h2>Pourquoi revisetout.sn ?</h2>
+        <p class="section-sub">Pensé par un élève, pour les élèves du Sénégal.</p>
+        <div class="features">
+          <div class="feature">
+            <span class="icon" aria-hidden="true">🇸🇳</span>
+            <h3>100% sénégalais</h3>
+            <p>Contenu conforme aux programmes du MEN et du MESRI.</p>
+          </div>
+          <div class="feature">
+            <span class="icon" aria-hidden="true">📱</span>
+            <h3>Pensé pour le mobile</h3>
+            <p>Pages légères et rapides, même avec une connexion limitée.</p>
+          </div>
+          <div class="feature">
+            <span class="icon" aria-hidden="true">⚡</span>
+            <h3>Tout au même endroit</h3>
+            <p>Épreuves, cours et corrigés réunis, sans chercher partout.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA / CONTACT ============ -->
+    <section class="cta" id="contact">
+      <div class="container">
+        <h2>Une épreuve, un corrigé, une fiche à partager ?</h2>
+        <p>Ça prend 30 secondes. Ton PDF aidera des élèves comme toi, partout au Sénégal.</p>
+        <p style="margin-top:1.25rem;">
+          <a href="partager.html" class="btn btn-yellow">📤 Partager un document</a>
+        </p>
+
+        <p style="margin-top:1.75rem;font-size:.9rem;opacity:.85;">
+          Une question ? Écris-nous :
+        </p>
+        <p style="margin-top:.35rem;">
+          <a href="https://wa.me/221766589598" class="btn btn-yellow btn-small" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a href="mailto:boubscapital@gmail.com" class="btn btn-yellow btn-small">✉️ E-mail</a>
+        </p>
+
+        <form class="newsletter" onsubmit="return false;" style="margin-top:1.75rem;">
+          <input type="email" placeholder="Ton adresse e-mail" aria-label="Adresse e-mail" required>
+          <button type="submit" class="btn btn-yellow">Je m'inscris</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">revise<span>tout</span>.sn</a>
+        <p>© 2026 revisetout.sn · La bibliothèque numérique des élèves et étudiants du Sénégal.</p>
+      </div>
+      <nav class="footer-links" aria-label="Liens du pied de page">
+        <a href="bibliotheque.html">Bibliothèque</a>
+        <a href="partager.html">Partager</a>
+        <a href="contact.html">Contact</a>
+        <a href="mentions-legales.html">Mentions légales et conditions</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('menuBtn');
+      var nav = document.getElementById('nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
